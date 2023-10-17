@@ -16,7 +16,7 @@ from langchain.agents import initialize_agent
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
 
-class agent:
+class Embedding:
     
     def __init__(self,):
         
@@ -65,25 +65,3 @@ class agent:
         
         return(index)
         
-    def create_agent(self,):
-        """"
-        Define agent with memory from the chat
-        """
-        
-        index = self.indexer()
-        # Define tools
-        tools = [
-            Tool(
-            name = "LlamaIndex",
-                # func=lambda q: str(index.as_query_engine().query(q)),
-                func=lambda q: str(index.as_query_engine().query(q)),
-                description="useful for when you want to answer questions about the author. The input to this tool should be a complete english sentence.",
-                return_direct=True
-            ),
-        ]
-        #Initialize conversational memory
-        conversational_memory = ConversationBufferWindowMemory( memory_key='chat_history', k=5, return_messages=True )
-        # Initialize agent with conversational memory
-        agent_executor = initialize_agent(tools, llm=ChatOpenAI(temperature=0.7, model_name=self.model), agent="conversational-react-description", memory=conversational_memory)
-    
-        return(agent_executor)
