@@ -1,0 +1,6 @@
+// Please modify the content, remove this comment and rename this file to CONFIG_LIST.json to run the sample code.
+{
+    "openai_organization":"<your OpenAI organisation here>",
+    "openai_api_key": "<your OpenAI API key here>",
+    "model":"gpt-4"
+}
