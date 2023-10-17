@@ -1,5 +1,6 @@
 # LOADING
 import os
+import json
 from llama_index import SimpleDirectoryReader
 from llama_index import LLMPredictor, PromptHelper, ServiceContext
 from llama_index import GPTVectorStoreIndex
@@ -21,6 +22,9 @@ class agent:
         
         # self.model="gpt-3.5-turbo"
         self.model = "gpt-4"
+        with open("CONFIG_LIST.json", "r") as file:
+            config = json.load(file)
+        self.model  = config["model"]
         
          
     def read_docs(self,):

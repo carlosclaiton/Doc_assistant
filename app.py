@@ -5,7 +5,7 @@ import os
 import json
 import openai
 
-with open("key.json", "r") as file:
+with open("CONFIG_LIST.json", "r") as file:
     config = json.load(file)
 
 os.environ['OPENAI_API_KEY'] = config["openai_api_key"]
