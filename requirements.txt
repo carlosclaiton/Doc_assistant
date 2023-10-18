@@ -1,3 +1,5 @@
 flask
 Werkzeug==2.2.2
 llama_index
+openai
+langchain
