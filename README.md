@@ -17,7 +17,7 @@ Clone the repository to have all the important files:
 got to the folder and then instal the packages from requirements.txt by running the pip command
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Configuration
