@@ -34,16 +34,14 @@ class Embedding:
 
     def indexer(self,):
         
-        if os.path.exists('storage'):
-            print('exist')
-            
+        
+        try:
             # rebuild storage context
             storage_context = StorageContext.from_defaults(persist_dir="storage")
             # load index
             index = load_index_from_storage(storage_context)
-
-        
-        else:
+        except:
+            
             print('not exist, creating index ... ')
 
             documents = self.read_docs()
