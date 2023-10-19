@@ -159,6 +159,7 @@ output/
 
 # local config files
 *.config.local
+MyTemp_jupyter_app.ipynb
 CONFIG_LIST.json
 key_openai.txt
 key_aoai.txt
@@ -167,3 +168,4 @@ wolfram.txt
 key.json
 MyBook/
 storage/
+MyTempDocs/
