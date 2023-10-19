@@ -3,3 +3,5 @@ Werkzeug==2.2.2
 llama_index
 openai
 langchain
+llama-cpp-python
+chainlit

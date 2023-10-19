@@ -29,7 +29,8 @@ tools = [
 Tool(
     name = "LlamaIndex",
     func=lambda q: str(index.as_query_engine().query(q)),
-    description="useful for when you want to answer questions about the author. The input to this tool should be a complete english sentence.",
+    description="You can ask a human for guidance when you think you got stuck or you are not sure what to do next. "
+                "The input should be a question for the human.",
     return_direct=True
     ),
 ]
